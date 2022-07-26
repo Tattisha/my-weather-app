@@ -59,27 +59,35 @@ form {
 }
 
 .col {
-  max-inline-size: 200px;
+  max-inline-size: 230px;
   margin-bottom: 40px;
 }
 
 .col-sm {
-  max-inline-size: 130px;
+  max-inline-size: 150px;
+  text-align: center;
 }
 
-.temp {
-  font-size: 40px;
-  line-height: 70px;
-}
-
-.units {
-  font-size: 20px;
-  line-height: 70px;
+.col-sm .fa-solid fa-sun {
+  max-inline-size: 70px;
+  text-align: center;
 }
 
 .fa-solid {
   font-size: 70px;
   color: rgb(230, 209, 28);
+}
+
+.temp strong {
+  font-size: 55px;
+  line-height: 55px;
+}
+
+.units {
+  position: relative;
+  font-size: 20px;
+  top: -23px;
+  line-height: 55px;
 }
 
 .highlow,
