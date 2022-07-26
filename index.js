@@ -19,7 +19,7 @@ function showWeather(response) {
   city.innerHTML = response.data.name;
 
   let temperature = document.querySelector("#temp-left");
-  temperature.innerHTML = Math.round(response.data.main.temp) + "&degC";
+  temperature.innerHTML = Math.round(response.data.main.temp);
 
   let maxTemp = document.querySelector("#high-temp");
   maxTemp.innerHTML =

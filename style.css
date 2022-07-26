@@ -68,7 +68,12 @@ form {
 }
 
 .temp {
-  font-size: 34px;
+  font-size: 40px;
+  line-height: 70px;
+}
+
+.units {
+  font-size: 20px;
   line-height: 70px;
 }
 
