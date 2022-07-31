@@ -11,7 +11,13 @@ let days = [
 ];
 let day = days[now.getDay()];
 let hours = now.getHours();
+if (hours < 10) {
+  hours = `0${hours}`;
+}
 let minutes = now.getMinutes();
+if (minutes < 10) {
+  minutes = `0${minutes}`;
+}
 h2.innerHTML = `${day} ${hours}:${minutes}`;
 
 function showWeather(response) {
@@ -22,18 +28,16 @@ function showWeather(response) {
   temperature.innerHTML = Math.round(response.data.main.temp);
 
   let maxTemp = document.querySelector("#high-temp");
-  maxTemp.innerHTML =
-    "High: " + Math.round(response.data.main.temp_max) + "&degC";
+  maxTemp.innerHTML = Math.round(response.data.main.temp_max);
 
   let minTemp = document.querySelector("#low-temp");
-  minTemp.innerHTML =
-    "Low: " + Math.round(response.data.main.temp_min) + "&degC";
+  minTemp.innerHTML = Math.round(response.data.main.temp_min);
 
   let rain = document.querySelector("#rain");
-  rain.innerHTML = "Rain: " + response.data.clouds.all + "%";
+  rain.innerHTML = response.data.clouds.all;
 
   let wind = document.querySelector("#wind");
-  wind.innerHTML = "Wind: " + Math.round(response.data.wind.speed) + "km/h";
+  wind.innerHTML = Math.round(response.data.wind.speed);
 
   let icon = document.querySelector("#icon");
   icon.setAttribute(
