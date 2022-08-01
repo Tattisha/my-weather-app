@@ -18,7 +18,7 @@ h3 {
   text-align: center;
 }
 
-h5 {
+h4 {
   font-size: 16px;
   padding: 0;
 }
@@ -121,5 +121,4 @@ form {
 .bottom-link {
   font-size: 16px;
   text-align: center;
-  line-height: 50px;
 }
