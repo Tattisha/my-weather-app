@@ -20,6 +20,28 @@ if (minutes < 10) {
 }
 h2.innerHTML = `${day} ${hours}:${minutes}`;
 
+function showForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+  let days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `   <div class="card-group">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title" id="forecast-day">${day}</h4>
+                <p class="card-icon" id="forecast-icon">☀</p>
+                <span class="forecast-temp-max">+23&deg</span>/
+                <span class="forecast-temp-min">+15&deg</span>
+              </div>
+            </div>
+          </div>`;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function showWeather(response) {
   let city = document.querySelector("#current-city");
   city.innerHTML = response.data.name;
@@ -111,3 +133,4 @@ let button = document.querySelector("#current-button");
 button.addEventListener("click", getGeo);
 
 searchCity("Vancouver");
+showForecast();
