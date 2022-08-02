@@ -18,10 +18,6 @@ h3 {
   text-align: center;
 }
 
-p {
-  font-size: 32px;
-}
-
 form {
   font-size: 20px;
   text-align: center;
@@ -107,15 +103,26 @@ form {
 
 .weather-forecast {
   text-align: center;
-  padding: 0;
+  padding: 10px;
   font-size: 16px;
   font-weight: 500;
+  display: block;
+  margin: 0 auto;
 }
 
 #five-days {
   border: 1px solid rgb(0 0 0 / 18%);
-  border-radius: 0.35px;
+  padding: 10px;
 }
+
+.forecast-temp-max {
+  font-weight: 450;
+}
+
+.forecast-temp-min {
+  font-weight: 150;
+}
+
 .bottom-link {
   font-size: 16px;
   text-align: center;
